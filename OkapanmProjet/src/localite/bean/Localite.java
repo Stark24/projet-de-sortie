@@ -24,6 +24,7 @@ public Localite() {
 public Localite(String NomLocalite,double latitude,double longitude) {
 	this.latitude=latitude;
 	this.longitude=longitude;
+	this.NomLocalite=NomLocalite;
 }
 public double getLatitude() {
 	return latitude;
@@ -36,5 +37,10 @@ public double getLongitude() {
 }
 public void setLongitude(double longitude) {
 	this.longitude = longitude;
+}
+@Override
+public String toString()
+{
+    return "Localite{" + "nomLocalite=" +NomLocalite + ", longitude=" + longitude + ", latitude=" + latitude +'}';
 }
 }

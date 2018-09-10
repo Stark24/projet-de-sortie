@@ -8,7 +8,7 @@ package Entreprise.bean;
  *
  */
 public class Entreprise {
-private String nomEntreprise, Adresse, telephone,Email,Horaire;
+private String nomEntreprise, Adresse, telephone,Email,Horaire,urlImage;
 public String getAdresse() {
 	return Adresse;
 }
@@ -51,11 +51,26 @@ public void setNomEntreprise(String nomEntreprise) {
 public Entreprise() {
 	
 }
-public Entreprise(String nomEntreprise,String Adresse,String telephone, String Email,String Horaire) {
+public Entreprise(String nomEntreprise,String Adresse,String telephone, String Email,String Horaire,String urlImage) {
 	this.nomEntreprise=nomEntreprise;
 	this.Adresse=Adresse;
 	this.Email=Email;
 	this.telephone=telephone;
 	this.Horaire=Horaire;
+	this.urlImage=urlImage;
+}
+
+@Override
+public String toString()
+{
+    return "Entreprise{" + "nomEntreprise=" + nomEntreprise + ", Adresse=" + Adresse + ", Email=" + Email + ",telephone=" + telephone + ", Horaire=" + Horaire +  '}';
+}
+
+public String getUrlImage() {
+	return urlImage;
+}
+
+public void setUrlImage(String urlImage) {
+	this.urlImage = urlImage;
 }
 }
